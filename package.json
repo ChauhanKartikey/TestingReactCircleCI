@@ -38,6 +38,6 @@
   "devDependencies": {
     "@testing-library/react": "^12.0.0",
     "msw": "^0.33.3",
-    "netlify": "^8.0.0"
+    "netlify-cli": "^6.0.8"
   }
 }
