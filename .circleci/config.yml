@@ -3,16 +3,16 @@ version: 2.1
 workflows:
   test-deploy:
     # sets up triggers for the jobs
-    triggers:
-      # sets up automatic job execution
-      - schedule:
-          # this is some posix syntax for time idk
-          cron: "0 * * * *"
-          # setting up filters so only main branch is used
-          filters:
-            branches:
-              only:
-                - main
+    # triggers:
+    # sets up automatic job execution
+    # - schedule:
+    # this is some posix syntax for time idk
+    # cron: "0 * * * *"
+    # setting up filters so only main branch is used
+    # filters:
+    # branches:
+    # only:
+    # - main
     # specify the job/jobs to run
     jobs:
       - test
@@ -30,6 +30,7 @@ jobs:
           TEST_ENV_VARIABLE: ramesh
     steps:
       - checkout
+      - run: node --version
       - run:
           name: Install dependencies
           command: npm install
