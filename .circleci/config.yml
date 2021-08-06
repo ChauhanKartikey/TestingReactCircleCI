@@ -35,3 +35,6 @@ jobs:
       - run:
           name: Run Tests
           command: npm run test
+      - run:
+          name: Deploy To Netlify
+          command: npm run netlify:deploy
