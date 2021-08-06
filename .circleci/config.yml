@@ -36,5 +36,8 @@ jobs:
           name: Run Tests
           command: npm run test
       - run:
+          name: Build Site
+          command: npm run build
+      - run:
           name: Deploy To Netlify
           command: npm run netlify:deploy
